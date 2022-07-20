@@ -33,7 +33,7 @@ class Battlefield:
 
     def run_battle(self):
         print('The battle has begun!')
-        while self.fleet.is_alive() and self.herd.is_alive():
+        while self.fleet.is_alive and self.herd.is_alive:
             for x in range(3):
                 #robot at position x in fleet , select weapon and select target
                 self.fleet.members[x].switch_weapon()

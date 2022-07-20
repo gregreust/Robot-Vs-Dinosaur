@@ -11,7 +11,7 @@ class Herd:
             return
         for x in self.members:
             if x.health <= 0:
-                name = self.members.pop(x)
+                self.members.remove(x)
                 print(f'{x.name} was defeated')
 
     

@@ -15,7 +15,7 @@ class Robot:
     def switch_weapon(self):
         selection = 0
         while selection <= 0 or selection > 3:
-            selection = input('Enter 1 for lazer gun, 2 for grenade, or 3 for iron fist: ')
+            selection = int(input('Enter 1 for lazer gun, 2 for grenade, or 3 for iron fist: '))
             if selection == 1 or selection == 2 or selection == 3:
                 self.active_weapon = self.weapons[int(selection) - 1] #user enters 123 but list is 012
                 return
