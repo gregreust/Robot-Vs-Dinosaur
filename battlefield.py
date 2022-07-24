@@ -11,12 +11,15 @@ class Battlefield:
         print('A fleet of robots: ')
         for x in self.fleet.members:
             print(x.name)
+        print('')
         print('Facing a herd of dinosaurs: ')
         for x in self.herd.members:
             print(x.name)
+        print('')
 
     def choose_target(self): #user chooses the robots target
         user_choice = 0
+        print('')
         while user_choice <= 0  or user_choice > 3: 
 
             for x in range(len(self.herd.members)):
@@ -45,6 +48,7 @@ class Battlefield:
         self.herd.check_hp()
         #if hp is 0, return "robots win" and break
         if self.herd.is_alive == False:
+            print('')
             print('The herd of dinosaurs was defeated! Congratulations')
                     
 
@@ -57,6 +61,7 @@ class Battlefield:
         self.fleet.check_hp()
         #if hp is zero, return "dinosaurs win" and break
         if self.fleet.is_alive == False:
+            print('')
             print('The robots were defeated by the herd of dinosaurs. Sad')
                 
 
